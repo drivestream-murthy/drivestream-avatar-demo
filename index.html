@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Drivestream Avatar Demo</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="./public/Drivestream_LARGE.png" alt="Drivestream" class="logo"/>
+      <h1>Drivestream Avatar Demo</h1>
+    </div>
+    <div class="controls">
+      <button id="btnStart" class="button">Start</button>
+      <button id="btnMic" class="button ghost">Mic: Off</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="avatar-stage">
+      <div id="avatarContainer" class="avatar-container">
+        <div class="avatar" id="avatarStub">
+          <div class="avatar-head"></div>
+          <div class="avatar-body"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <input id="textInput" type="text" placeholder='Try: "hello", "module 1", "both", "Harvard University"' />
+        <button id="btnSend" class="button">Send</button>
+        <span id="status"></span>
+      </div>
+    </section>
+
+    <section class="video-stage">
+      <div id="videoWrapper" class="video-wrapper hidden">
+        <div class="video-header">
+          <span>Module video</span>
+          <div>
+            <button id="btnUnmute" class="button small ghost">Unmute</button>
+            <button id="btnCloseVideo" class="button small">Close</button>
+          </div>
+        </div>
+        <div class="video-frame" id="videoFrame"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <span class="badge">Quick actions:</span>
+        <button class="button small" data-quick="module 1">Module 1</button>
+        <button class="button small" data-quick="module 2">Module 2</button>
+        <button class="button small" data-quick="both">Both</button>
+        <button class="button small" data-quick="yes">Yes</button>
+        <button class="button small" data-quick="no">No</button>
+        <button class="button small" data-quick="close video">Close video</button>
+      </div>
+      <div class="row">
+        <span class="badge">Backgrounds:</span>
+        <button class="button small ghost" data-quick="harvard university">Harvard</button>
+        <button class="button small ghost" data-quick="oxford university">Oxford</button>
+        <button class="button small ghost" data-quick="stanford university">Stanford</button>
+        <button class="button small ghost" data-quick="default">Default</button>
+      </div>
+      <div class="row">
+        <span class="badge">Mic:</span>
+        <span id="micStatus" class="kbd">idle</span>
+        <span class="badge">Heard:</span>
+        <span id="lastTranscript" class="kbd">—</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">Root-ready • Relative paths • No routing conflicts</footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
