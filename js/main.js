@@ -1,1 +1,0 @@
-import { USE_HEYGEN } from './config.js'; console.log('Loaded Avatar Gen Subfolder. USE_HEYGEN=', USE_HEYGEN);
