@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Drivestream Avatar Demo</title><link rel="stylesheet" href="./styles.css"/></head>
+<body>
+<header class="app-header"><h1>Drivestream Avatar Demo</h1>
+<div class="controls"><button id="btnStart" class="button">Start</button><button id="btnMic" class="button ghost">Mic: Off</button></div>
+</header>
+<main class="stage">
+<section class="avatar-stage"><div id="avatarContainer" class="avatar-container">
+<div class="avatar" id="avatarStub"><div class="avatar-head"></div><div class="avatar-body"></div></div></div>
+<div class="controls"><input id="textInput" type="text" placeholder='Say/type: "hello", "module 1", "Harvard University"'/>
+<button id="btnSend" class="button">Send</button><span id="status"></span></div></section>
+<section class="video-stage"><div id="videoWrapper" class="video-wrapper hidden">
+<div class="video-header"><span>Module video</span><div><button id="btnUnmute" class="button small ghost">Unmute</button><button id="btnCloseVideo" class="button small">Close</button></div></div>
+<div class="video-frame" id="videoFrame"></div></div></section></main>
+<footer class="app-footer">Subfolder-ready • No routes • Assets via relative paths</footer>
+<script type="module" src="./js/main.js"></script></body></html>
