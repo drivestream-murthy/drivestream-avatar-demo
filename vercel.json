@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/(js|public)/(.*)", "dest": "/$1/$2" },
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/(.*\.(?:js|css|png|jpg|jpeg|svg|ico|json|txt|html))", "dest": "/$1" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
